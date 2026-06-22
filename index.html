@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테트리스</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <header class="game__header">
+      <h1 class="game__title">테트리스</h1>
+      <p class="game__subtitle">HTML · CSS · JavaScript 학습용 프로젝트</p>
+    </header>
+
+    <section class="game__layout">
+      <div class="game__board-wrap">
+        <h2 class="visually-hidden">게임 보드</h2>
+        <div
+          id="board"
+          class="board"
+          role="grid"
+          aria-label="테트리스 게임 보드"
+        ></div>
+      </div>
+
+      <aside class="game__sidebar">
+        <section class="panel">
+          <h2 class="panel__title">점수</h2>
+          <p id="score" class="panel__score" aria-live="polite">0</p>
+        </section>
+
+        <section class="panel panel--controls">
+          <h2 class="panel__title">조작법</h2>
+          <ul class="controls">
+            <li><kbd>←</kbd> 왼쪽 이동</li>
+            <li><kbd>→</kbd> 오른쪽 이동</li>
+            <li><kbd>↓</kbd> 한 칸 빠르게 내리기</li>
+            <li><kbd>↑</kbd> 블록 회전</li>
+            <li><kbd>Space</kbd> 하드 드롭 (즉시 낙하)</li>
+          </ul>
+        </section>
+
+        <div class="actions">
+          <button id="start-btn" type="button" class="btn btn--primary">시작</button>
+          <button id="restart-btn" type="button" class="btn btn--secondary">재시작</button>
+        </div>
+      </aside>
+    </section>
+
+    <p id="status" class="game__status" aria-live="polite">시작 버튼을 눌러 게임을 준비하세요.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
